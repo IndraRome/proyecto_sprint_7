@@ -1,0 +1,7 @@
+pandas
+plotly_express
+streamlit
+dash
+dash-bootstrap-components
+plotly
+gunicorn
