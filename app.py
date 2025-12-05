@@ -17,8 +17,8 @@ server = app.server   # necesario para Render
 # Colores tema oscuro pastel
 # ======================
 colors = {
-    "background": "#1E1E2E",  # fondo oscuro elegante
-    "container": "#252538",   # tarjeta oscura
+    "background": "#E0D6ED",  # fondo oscuro elegante
+    "container": "#3D374F",   # tarjeta oscura
     "text": "#F8F8FF",
     "pastel_pink": "#E6BDCE",  # rosa pastel suave
     "pastel_lilac": "#D5C1F6",  # lila pastel
