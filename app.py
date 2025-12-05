@@ -8,6 +8,13 @@ from dash import Dash, html, dcc, Input, Output
 df = pd.read_csv("vehicles_us.csv")
 
 # ======================
+# FUENTE POPPINS (Google Fonts)
+# ======================
+external_scripts = [
+    "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+]
+
+# ======================
 # Inicializar app
 # ======================
 app = Dash(__name__)
@@ -17,19 +24,23 @@ server = app.server   # necesario para Render
 # Colores tema oscuro pastel
 # ======================
 colors = {
-    "background": "#E0D6ED",  # fondo oscuro elegante
-    "container": "#3D374F",   # tarjeta oscura
-    "text": "#F8F8FF",
-    "pastel_pink": "#E6BDCE",  # rosa pastel suave
-    "pastel_lilac": "#D5C1F6",  # lila pastel
+    "background": "#E7E3F2",     # lavanda gris suave
+    "container": "#F4F0FA",      # tarjeta pastel clara
+    "text": "#2C2C34",           # gris oscuro profesional
+    "pastel_pink": "#E7C4D8",    # rosa pastel elegante
+    "pastel_lilac": "#D9CCF2",   # lila pastel profesional
 }
 
 # ======================
 # Layout con TABS
 # ======================
 app.layout = html.Div(
-    style={"backgroundColor": colors["background"],
-           "minHeight": "100vh", "padding": "20px"},
+    style={
+        "backgroundColor": colors["background"],
+        "minHeight": "100vh",
+        "padding": "20px",
+        "fontFamily": "'Poppins', sans-serif",   # 👈 aplicar Poppins a todo
+    },
     children=[
         # Encabezado
         html.H1(
@@ -47,7 +58,7 @@ app.layout = html.Div(
 
         # Subheading
         html.H3(
-            "Exploración de Datos en un Tema Oscuro con Tonos Pastel",
+            "Exploración de Datos",
             style={
                 "textAlign": "center",
                 "padding": "10px",
